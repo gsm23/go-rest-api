@@ -1,0 +1,8 @@
+{
+    "files.exclude": {
+        ".gitignore": true
+    },
+    "go.gopath": "${workspaceFolder}",
+    "go.installDependenciesWhenBuilding": true,
+    "editor.cursorBlinking": "smooth"
+}

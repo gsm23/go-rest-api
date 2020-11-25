@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"[markdown]": {
+		"breadcrumbs.showArrays": true,
+			"editor.wordWrap": "on",
+			"editor.quickSuggestions": false
+		},
+		"editor.wordWrap": "on",
+		"editor.autoIndent": "full",
+		"goOutliner.enableDebugChannel": true,
+		"powershell.buttons.showPanelMovementButtons": true,
+		"swaggerViewer.previewInBrowser": true,
+		"yaml.customTags": [
+		"full"
+		]
+	}
+}
