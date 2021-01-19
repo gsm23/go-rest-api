@@ -1,27 +1,19 @@
 package config
 
-import (
-	"fmt"
-	//	"gopkg.in/yaml.v1"
-	//"io/ioutil"
-	"path/filepath"
-)
-
 type Config struct {
 	Description string
 	Fruits      map[string][]string
 }
-
+/*
 func Readfile() {
 	fmt.Println("Inside Config Module....")
-	filename, err := filepath.Rel("../")
+	filename, err := filepath.Rel(".", "../config.yaml")
 	if err != nil {
 		panic(err)
 	}
 	fmt.Println(filename)
-	//	yamlFile, err := ioutil.ReadFile(filename)
-	//	var config Config
-	//	err = yaml.Unmarshal(yamlFile, &config)
+	config, err = ioutil.ReadFile(filename)
+	err = yaml.Unmarshal(yamlFile, &Config)
 	//	if err != nil {
 	//		panic(err)
 	//	}
@@ -41,4 +33,3 @@ func Readfile() {
 		  	fmt.Printf("Value: %#v\n", config.Fruits)
 			}
 	*/
-}
