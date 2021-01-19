@@ -8,11 +8,11 @@ import (
 )
 var conf string
 
-type Configuration struct {
-	apiServer	apiServer		`yaml:"server,omitempty"`
-	Kafka		Kafka			`yaml:"kafka,omitempty"`
-	App			Application		`yaml:"application,omitempty"`
-}
+//type Configuration struct {
+//	apiServer	apiServer		`yaml:"server,omitempty"`
+//	Kafka		Kafka			`yaml:"kafka,omitempty"`
+//	App			Application		`yaml:"application,omitempty"`
+//}
 
 func main() {
 	var f Configuration = Configuration{}
