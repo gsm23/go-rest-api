@@ -1,9 +1,23 @@
 ---
-description: fruits are delicious
-fruits:
-  apple:
-    - red
-    - sweet
-  lemon:
-    - yellow
-    - sour
+server:
+  port: 8080
+  debug: true
+  bindIp: 0.0.0.0
+  read_timeout_seconds: 15
+  write_timeout_seconds: 20
+  contentType: application
+
+kafka:
+  bootstrap_server: "localhost:9092;host1:9092;host2:9092"
+  topic: "TestTopic"
+  serializer: "Serializer"
+  buffer_memory: 1313223
+  compression: "lzo"
+  batch_size: 343234242
+  client_id: "GitOnboarding"
+  max_request_size: 2323232
+
+application:
+  min_password_strength: 3
+  swagger_ui_path: "assets/swagger"
+  bootstrap_server: "localhost:9092;host1:9092;host2:9092"

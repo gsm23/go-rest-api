@@ -1,44 +1,33 @@
+
 package config
 
 import (
-	"fmt"
-	//	"gopkg.in/yaml.v1"
-	//"io/ioutil"
-	"path/filepath"
+
+	"github.com/gsm23/go-rest-api/common"
+	"gopkg.in/yaml.v3"
+	"io/ioutil"
+	"log"
 )
 
-type Config struct {
-	Description string
-	Fruits      map[string][]string
+type (
+	ApiServer = common.WebServer
+	Kafka = common.Kafka
+	Application = common.Application
+)
+
+type Configuration struct {
+	ApiServer	ApiServer		`yaml:"server,omitempty"`
+	Kafka		Kafka			`yaml:"kafka,omitempty"`
+	App			Application		`yaml:"application,omitempty"`
 }
 
-func Readfile() {
-	fmt.Println("Inside Config Module....")
-	filename, err := filepath.Rel("../")
+func ReadConfigYaml(configFile string, obj *Configuration ) {
+	configsrc, err := ioutil.ReadFile(configFile)
 	if err != nil {
-		panic(err)
+		log.Printf("Error: %v", err.Error())
 	}
-	fmt.Println(filename)
-	//	yamlFile, err := ioutil.ReadFile(filename)
-	//	var config Config
-	//	err = yaml.Unmarshal(yamlFile, &config)
-	//	if err != nil {
-	//		panic(err)
-	//	}
-
-	/*	if err != nil {
-		    	panic(err)
-		  	}
-
-		  	var config Config
-
-		  	err = yaml.Unmarshal(yamlFile, &config)
-		  	if err != nil {
-		    	panic(err)
-		  	}
-
-		  	fmt.Printf("Value: %#v\n", config.Description)
-		  	fmt.Printf("Value: %#v\n", config.Fruits)
-			}
-	*/
+	err = yaml.Unmarshal(configsrc, obj)
+	if err != nil {
+		log.Printf("Error: %v", err.Error())
+	}
 }
