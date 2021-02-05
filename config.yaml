@@ -1,5 +1,5 @@
 ---
-server:
+Server:
   port: 8080
   debug: true
   bindIp: 0.0.0.0
@@ -21,3 +21,4 @@ application:
   min_password_strength: 3
   swagger_ui_path: "assets/swagger"
   bootstrap_server: "localhost:9092;host1:9092;host2:9092"
+

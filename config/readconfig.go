@@ -2,7 +2,6 @@
 package config
 
 import (
-
 	"github.com/gsm23/go-rest-api/common"
 	"gopkg.in/yaml.v3"
 	"io/ioutil"
@@ -31,3 +30,4 @@ func ReadConfigYaml(configFile string, obj *Configuration ) {
 		log.Printf("Error: %v", err.Error())
 	}
 }
+

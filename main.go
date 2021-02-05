@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"github.com/gsm23/go-rest-api/config"
 )
-
 var conf string
 
 type (
