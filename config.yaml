@@ -5,7 +5,7 @@ server:
   bindIp: 0.0.0.0
   read_timeout_seconds: 15
   write_timeout_seconds: 20
-  contentType: application
+  contentType: application/JSON
 
 kafka:
   bootstrap_server: "localhost:9092;host1:9092;host2:9092"

@@ -7,8 +7,8 @@ type WebServer struct {
 	BindIp	string	`yaml:"bindIp,omitempty"`
 	ReadTimeOutSec	int	`yaml:"read_timeout_seconds,omitempty"`
 	WriteTimeOutSec	int	`yaml:"write_timeout_seconds,omitempty"`
-	//Methods	[]string	`yaml:"methods,omitempty"`
-	contentType	string	`yaml:"contentType,omitempty"`
+	Methods	[]string	`yaml:"methods,omitempty"`
+	ContentType	string	`yaml:"contentType,omitempty"`
 }
 
 //KAfka specific configurations

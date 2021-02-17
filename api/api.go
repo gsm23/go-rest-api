@@ -1,38 +1,50 @@
 package api
 
-import(
-	"encoding/json"
+import (
 	"fmt"
 	"github.com/gorilla/mux"
-	"log"
-	"net/http"
+	"github.com/gsm23/go-rest-api/common"
+//	"github.com/gsm23/go-rest-api/config"
 )
+
 
 type App struct {
 	Router *mux.Router
 }
 
+type (
+	s = common.WebServer
+)
 
-func (a *App) MyApp() {
-	fmt.Println("Starting the web server")
-	a.Router = mux.NewRouter()
-	//r.HandleFunc("/", showHomepage).Methods("GET")
-	//log.Fatal(http.ListenAndServe(":8080", r))
-	a.initializeRouter()
+func TestApi(a int) {
+	fmt.Println("\nInside API Module")
+	fmt.Println(a)
+
 }
 
+//func (a *App) MyApp(s *Server) {
+//	fmt.Println("Starting the web server")
+//	fmt.Println(&s)
+	//a.Router = mux.NewRouter()
+	//r.HandleFunc("/", showHomepage).Methods("GET")
+	//log.Fatal(http.ListenAndServe(":8080", r))
+	//a.initializeRouter()
+	//fmt.Println(s.ContentType)
+//}
 
+/*
 func showHomepage(w http.ResponseWriter, r *http.Request){
 	w.Write([]byte("Hello From my API....."))
 }
 
 // Starting server
-func (a *App) Run(addr string) {
+func (a *App) Run() {
 	log.Fatal(http.ListenAndServe(":8010", a.Router))
 }
 
 func (a *App) initializeRouter() {
-	a.Router.HandleFunction("/", showHomepage)
+	//a.Router.HandleFunction("/", showHomepage).Method("GET")
+	a.Router.Get("/").HandlerFunc(showHomepage)
 }
 
 //Error response
@@ -48,3 +60,5 @@ func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 	w.WriteHeader(code)
 	w.Write(response)
 }
+
+ */
